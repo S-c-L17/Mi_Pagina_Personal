@@ -1,0 +1,170 @@
+/* --- Estilos Generales --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- Estilo general del body --- */
+body {
+  font-family: "Blackink", sans-serif;
+  background-color: #ADD8E6;
+  color: #333;
+  line-height: 1.6;
+  font-size: 80%; /* porcentaje base */
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Tamaños de texto para elementos específicos --- */
+p { font-size: 0.9em; }
+
+h1 { font-size: 2em; }
+
+h2 { font-size: 1.4em; }
+
+#pie { font-size: 1.2em; }
+
+.epigrafes { font-size: 1.1em; }
+
+/* --- Ajuste de texto para pantallas más grandes --- */
+@media screen and (min-width: 800px) {
+  body {
+    font-size: 100%; /* ampliamos los textos si mide más de 800px */
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 120%; /* ampliamos aún más los textos si mide más de 1200px */
+  }
+}
+
+/* --- Encabezado --- */
+header {
+  background: linear-gradient(135deg, #4a90e2, #6a5acd);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.3rem;
+  font-family: "Rock Salt", cursive;
+}
+
+header p {
+  font-size: 1.1rem;
+}
+
+/* --- Menú de Navegación --- */
+nav {
+  background: #333;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  padding: 0.8rem 1.2rem;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: #4a90e2;
+}
+
+/* --- Secciones --- */
+section {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+section h2 {
+  color: #4a90e2;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #4a90e2;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+/* --- Imágenes generales --- */
+.card img {
+  width: 350px;             /* Tamaño uniforme */
+  height: auto;
+  border-radius: 10px;
+  border: 3px solid #000;   /* Borde negro */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  margin: 15px;
+  transition: transform 0.3s;
+  object-fit: cover;
+}
+
+.card img:hover {
+  transform: scale(1.05);
+}
+
+/* --- Imagen centrada (Escuela) --- */
+#Escuela .card img {
+  display: block;
+  margin: 0 auto;
+  border: 3px solid #000;   /* Solo le agregamos el borde */
+  width: 400px;              /* Mantiene su tamaño original */
+}
+
+/* --- Dos imágenes lado a lado (Actividades, Amigos, Familia) --- */
+#Actividades .card,
+#Amigos .card,
+#Familia .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#Actividades .card img,
+#Amigos .card img,
+#Familia .card img {
+  flex: 1 1 45%;
+  width: 350px;             /* Misma medida en todas */
+  margin: 10px;
+  border: 3px solid #000;   /* Borde negro uniforme */
+}
+
+/* --- Pie de Página --- */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* --- Adaptación Móvil --- */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  nav a {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  #Actividades .card,
+  #Amigos .card,
+  #Familia .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card img {
+    max-width: 90%;
+  }
+}
